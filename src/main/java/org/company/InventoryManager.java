@@ -52,7 +52,7 @@ public class InventoryManager {
             collection.updateOne(Filters.eq("name", itemName), Updates.set("quantity", newQuantity));
 
             System.out.println("\nItem's Quantity Updated Successfully!!!");
-            System.out.println("\nOld item quantity = " + currentQuantity +"\n New item quantity " + newQuantity + "\n");
+            System.out.println("\nOld item quantity = " + currentQuantity +"\nNew item quantity = " + newQuantity + "\n");
         }
         else{
             System.out.println("Error: This Item does not exist\n");
@@ -78,7 +78,6 @@ public class InventoryManager {
                     "\n\tName: " + docs.getString("name") +
                     "\n\tQuantity: " + docs.getInteger("quantity") +
                     "\n\tPrice: " + docs.getDouble("price") + "\n");
-            System.out.println(docs.toJson());
         }
         System.out.println("\n");
     }
